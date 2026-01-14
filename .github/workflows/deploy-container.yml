@@ -7,6 +7,10 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write
+
 env:
   REGISTRY: ${{ vars.AZURE_CONTAINER_REGISTRY_NAME }}.azurecr.io
   IMAGE_NAME: simplestore
